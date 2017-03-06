@@ -44,7 +44,7 @@ let b1 = new Body(new p5.Vector(1000,500), new p5.Vector(0,0), new p5.Vector(0,0
 let b2 = new Body(new p5.Vector(1000,700), new p5.Vector(40,0), new p5.Vector(0,0), 300+0)
 let b3 = new Body(new p5.Vector(1000,300), new p5.Vector(-40,0), new p5.Vector(0,0), 300+0)
 
-let bA = new Body(new p5.Vector(1000,500+0.000000), new p5.Vector(0,0), new p5.Vector(0,0), 40000)
+let bA = new Body(new p5.Vector(1000,500+0.0000001), new p5.Vector(0,0), new p5.Vector(0,0), 40000)
 let bB = new Body(new p5.Vector(1000,700), new p5.Vector(40,0), new p5.Vector(0,0), 300+0)
 let bC = new Body(new p5.Vector(1000,300), new p5.Vector(-40,0), new p5.Vector(0,0), 300+0)
 
