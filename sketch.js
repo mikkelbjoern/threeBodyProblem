@@ -1,5 +1,6 @@
 function setup() {
-  createCanvas(2000,1000);
+  var canvas = createCanvas(2000,1000);
+  canvas.parent('canvasDiv');
 }
 
 function draw() {
@@ -20,8 +21,8 @@ function Body(s,v,a,m) {
     this.a = new p5.Vector(0,0);
   }
   this.addForce = function(body) {
-    this.a.x += body.m*Gk*(body.s.x - this.s.x)/Math.abs(((this.s.dist(body.s)+0.1)**3));
-    this.a.y += body.m*Gk*(body.s.y - this.s.y)/Math.abs(((this.s.dist(body.s)+0.1)**3));
+    this.a.x += body.m*Gk*(body.s.x - this.s.x)/Math.abs(((this.s.dist(body.s)+1)**3));
+    this.a.y += body.m*Gk*(body.s.y - this.s.y)/Math.abs(((this.s.dist(body.s)+1)**3));
   }
 
   this.move = function() {
@@ -32,20 +33,20 @@ function Body(s,v,a,m) {
 
 let Gk = 6.62
 
-let s1 = new p5.Vector(1000,950);
-let v1 = new p5.Vector(50,0);
+let s1 = new p5.Vector(400,400);
+let v1 = new p5.Vector(-2,0);
 let a1 = new p5.Vector(0,0);
-let m1 = 500
+let m1 = 300
 
-let s2 = new p5.Vector(1000,500);
-let v2 = new p5.Vector(0,0);
+let s2 = new p5.Vector(500,200);
+let v2 = new p5.Vector(1,-(3**0.5));
 let a2 = new p5.Vector(0,0);
-let m2 = 200000
+let m2 = 300
 
-let s3 = new p5.Vector(1000,50);
-let v3 = new p5.Vector(-50,0);
+let s3 = new p5.Vector(600,400);
+let v3 = new p5.Vector(1,3**0.5);
 let a3 = new p5.Vector(0,0);
-let m3 = 500
+let m3 = 300
 
 let b1 = new Body(s1, v1, a1, m1)
 let b2 = new Body(s2, v2, a2, m2)
