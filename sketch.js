@@ -28,8 +28,10 @@ function Body(s,v,a,m) {
     this.a = new p5.Vector(0,0);
   }
   this.addForce = function(body) {
-    this.a.x += body.m*Gk*(body.s.x - this.s.x)/Math.abs(((this.s.dist(body.s)+0.1)**3));
-    this.a.y += body.m*Gk*(body.s.y - this.s.y)/Math.abs(((this.s.dist(body.s)+0.1)**3));
+    accVec = new p5.Vector(0,0);
+    accVec = (p5.Vector.sub(body.s, this.s)).mult((body.m * Gk)/(Math.abs(this.s.dist(body.s))**3)) ;
+    this.a.x += accVec.x;
+    this.a.y += accVec.y;
   }
 
   this.move = function() {
