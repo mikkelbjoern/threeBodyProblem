@@ -8,8 +8,8 @@ function draw() {
 
   fill(color('white'));
   ellipse(bB.s.x, bB.s.y, (bB.m/3.14)**0.5, (bB.m/3)**0.5);
-  ellipse(bA.s.x, b1.s.y, (bA.m/3.14)**0.5, (bA.m/3)**0.5);
-  ellipse(bC.s.x, b3.s.y, (bC.m/3.14)**0.5, (bC.m/3)**0.5);
+  ellipse(bA.s.x, bA.s.y, (bA.m/3.14)**0.5, (bA.m/3)**0.5);
+  ellipse(bC.s.x, bC.s.y, (bC.m/3.14)**0.5, (bC.m/3)**0.5);
 
   fill(color('red'));
   ellipse(b2.s.x, b2.s.y, (b2.m/3.14)**0.5, (b2.m/3)**0.5);
